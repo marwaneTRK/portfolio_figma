@@ -1,0 +1,363 @@
+     @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Nunito Sans", sans-serif;
+            overflow-x: hidden;
+        }
+        .logoss {
+            width: 200px;
+        }
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            background-color: #F8F3ED;
+        }
+
+        .vincent {
+            width: 55%;
+            padding: 50px 40px 0 70px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vincent_img {
+    background: url('/Vincent.png') no-repeat center center;
+    background-size: 100% auto; 
+    width: 100%; 
+}
+
+
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        
+
+       
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu li:not(:last-child):hover {
+            opacity: 0.6;
+        }
+
+        .call {
+            padding: 12px 24px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .call:hover {
+            background-color: #333;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .profile {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 60px;
+        }
+
+        .boston {
+            letter-spacing: 12px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        h1 {
+            font-size: 85px;
+            margin: 10px 0 20px 0;
+            font-family: "DM Serif Display", serif;
+            line-height: 1.1;
+            color: #000;
+        }
+
+        .record {
+            font-size: 24px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            max-width: 85%;
+            color: #333;
+        }
+
+        .btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 18px 60px;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: "Nunito Sans", sans-serif;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .btn:nth-child(2) {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .btn:nth-child(2):hover {
+            background-color: black;
+            color: white;
+        }
+
+        .logo-section {
+            background: #000;
+            padding: 35px 70px 35px 40px;
+            color: white;
+            overflow: hidden;
+            width: calc(100% + 110px);
+            margin-top: auto;
+            margin-bottom: 50px;
+        }
+
+        .logo-title {
+            margin-bottom: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .logo-slider {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .logo-track {
+    display: flex;
+    gap: 60px;
+    animation: scroll 25s linear infinite;
+    width: fit-content;
+}
+
+.logo-item {
+    height: 30px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    flex-shrink: 0;
+}
+
+        .logo-item:hover {
+            opacity: 1;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .vincent {
+                width: 55%;
+                padding: 40px 30px 0 50px;
+            }
+            
+            .vincent_img {
+                width: 45%;
+            }
+
+            h1 {
+                font-size: 70px;
+            }
+
+            .record {
+                font-size: 22px;
+            }
+
+            .logo-section {
+                width: calc(100% + 80px);
+                margin-left: -50px;
+                padding: 35px 50px 35px 30px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 60px;
+            }
+
+            .record {
+                font-size: 20px;
+                max-width: 95%;
+            }
+
+            .btn {
+                padding: 16px 50px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .vincent {
+                width: 100%;
+                padding: 30px 25px 0 25px;
+            }
+            
+            .vincent_img {
+                width: 100%;
+                min-height: 400px;
+                order: 2;
+            }
+            
+            nav {
+                margin-bottom: 60px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .profile {
+                padding-bottom: 40px;
+            }
+            
+            .boston {
+                letter-spacing: 8px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 48px;
+            }
+            
+            .record {
+                max-width: 100%;
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            
+            .btns {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 16px;
+                text-align: center;
+            }
+            
+            .logo-section {
+                width: 100vw;
+                margin-left: -25px;
+                padding: 30px 25px;
+                order: 3;
+            }
+            
+            .logo-track {
+                gap: 45px;
+            }
+
+            .logo-item {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vincent {
+                padding: 25px 20px 0 20px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+
+            .record {
+                font-size: 16px;
+            }
+            
+            .vincent_img {
+                min-height: 350px;
+            }
+
+            .boston {
+                letter-spacing: 6px;
+                font-size: 12px;
+            }
+
+            .logo-section {
+                margin-left: -20px;
+                padding: 25px 20px;
+            }
+
+            .logo-track {
+                gap: 35px;
+            }
+
+            .logo-item {
+                font-size: 16px;
+            }
+        }
